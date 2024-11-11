@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=whit"/>
   <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"/>
 </p>
-<p align="center">Simple CRUD app where I'll focus on practicing testing and dockerizing </p>
+<p align="center">Simple CRUD app where I focus on practicing testing and dockerizing </p>
 
 <h2>Getting started 🚀</h2>
 
