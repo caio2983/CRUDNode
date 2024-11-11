@@ -20,12 +20,12 @@ app.get("/", async (req, res) => {
 // Creates an order
 app.post("/order", async (req, res) => {
   const id = randomUUID();
-  amount = Math.round(Math.random() * 5000);
+  const amount = Math.round(Math.random() * 5000);
   try {
-    await pool.query("INSERT INTO orders(id,amount) VALUES ($1,$2", {
+    await pool.query("INSERT INTO orders(id, amount) VALUES ($1, $2)", [
       id,
       amount,
-    });
+    ]);
     res.status(200).send({ message: "successfully added child" });
   } catch (err) {
     console.log(err);
@@ -36,9 +36,7 @@ app.post("/order", async (req, res) => {
 // Sets up the db
 app.get("/setup", async (req, res) => {
   try {
-    await pool.query(
-      "CREATE TABLE orders(id UUID PRIMARY KEY, amount NUMBER )"
-    );
+    await pool.query("CREATE TABLE orders(id UUID PRIMARY KEY, amount INT )");
     res.status(200).send({ message: "successfully created table" });
   } catch (err) {
     console.log(err);
