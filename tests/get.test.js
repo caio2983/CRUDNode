@@ -1,4 +1,4 @@
-// docker exec -it 565698501ae1  /bin/bash
+// docker exec -it <container's id>  /bin/bash
 // npm run test
 
 const request = require("supertest");
@@ -22,7 +22,7 @@ describe("GET /", () => {
     await pool.end();
   });
 
-  it("deve retornar uma lista de pedidos (orders)", async () => {
+  it("should return a list of orders (orders)", async () => {
     const response = await request(app).get("/");
 
     expect(response.status).toBe(200);
