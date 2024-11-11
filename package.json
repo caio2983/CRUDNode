@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "crudnode": "file:",
     "express": "^4.21.1",
     "pg": "^8.13.1"
   }
