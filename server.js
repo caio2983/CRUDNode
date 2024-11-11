@@ -1,7 +1,7 @@
 const express = require("express");
 const { randomUUID } = require("crypto");
 const pool = require("./database/db.js");
-const port = 1337;
+const port = 3000;
 
 const app = express();
 app.use(express.json());
@@ -37,7 +37,7 @@ app.post("/order", async (req, res) => {
 app.get("/setup", async (req, res) => {
   try {
     await pool.query(
-      "CREATE TABLE orders(id NUMBER PRIMARY KEY, amount NUMBER )"
+      "CREATE TABLE orders(id UUID PRIMARY KEY, amount NUMBER )"
     );
     res.status(200).send({ message: "successfully created table" });
   } catch (err) {

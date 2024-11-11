@@ -4,7 +4,7 @@ const pool = new Pool({
   port: 5432,
   user: "user123",
   password: "password",
-  database: "crudDB",
+  database: "db123",
 });
 
 module.exports = pool;
